@@ -1,8 +1,8 @@
-import numpy as np
+import tensorflow as tf
 
-v1 = np.array([1,2,3,4])
-v2 = np.array([5,6,7,8])
-v3 = np.array([9,9,9,9])
-
-result = np.vstack([v1,v2, v3])
-print(result)
+stats = tf.constant([[1,2,3],[4,5,6]])
+print(stats.numpy())
+print(" ")
+print(tf.reduce_max(stats, axis=1))
+print(" ")
+print(tf.reduce_sum(stats, axis=1))
